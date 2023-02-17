@@ -1,0 +1,4 @@
+# Project exclude paths
+/w1nnleo-common-base/target/
+/w1nnleo-common-dependencies/target/
+/w1nnleo-common-exception/target/
