@@ -13,7 +13,7 @@ import lombok.Getter;
 public enum CommonEnum {
 
     SUCCESS(0, "SUCCESS"),
-    FAIL(1, "FAIL"),
+    FAIL(-1, "FAIL"),
     ;
 
     private Integer code;
