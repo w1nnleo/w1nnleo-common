@@ -27,12 +27,6 @@
             <artifactId>w1nnleo-common-base</artifactId>
             <version>${w1nnleo.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.w1nnleo</groupId>
-            <artifactId>w1nnleo-common-exception</artifactId>
-            <version>${w1nnleo.version}</version>
-        </dependency>
-
     </dependencies>
 
 </project>
