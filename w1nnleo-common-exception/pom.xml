@@ -5,7 +5,7 @@
     <parent>
         <artifactId>w1nnleo-common</artifactId>
         <groupId>com.w1nnleo</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,7 +14,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <w1nnleo.version>1.0-SNAPSHOT</w1nnleo.version>
+        <w1nnleo.version>1.0.0</w1nnleo.version>
     </properties>
 
     <dependencies>
