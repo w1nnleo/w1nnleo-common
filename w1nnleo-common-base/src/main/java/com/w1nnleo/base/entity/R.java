@@ -23,23 +23,23 @@ public class R<T> {
 
     private String msg;
 
-    public static <T> R ok() {
-        return R.builder().code(CommonEnum.SUCCESS.getCode()).msg(CommonEnum.SUCCESS.getMsg()).build();
+    public static <T> R<T> ok() {
+        return R.<T>builder().code(CommonEnum.SUCCESS.getCode()).msg(CommonEnum.SUCCESS.getMsg()).build();
     }
 
-    public static <T> R ok(T data) {
-        return R.builder().data(data).code(CommonEnum.SUCCESS.getCode()).msg(CommonEnum.SUCCESS.getMsg()).build();
+    public static <T> R<T> ok(T data) {
+        return R.<T>builder().data(data).code(CommonEnum.SUCCESS.getCode()).msg(CommonEnum.SUCCESS.getMsg()).build();
     }
 
-    public static <T> R ok(T data, Integer code, String msg) {
-        return R.builder().data(data).code(code).msg(msg).build();
+    public static <T> R<T> ok(T data, Integer code, String msg) {
+        return R.<T>builder().data(data).code(code).msg(msg).build();
     }
 
-    public static <T> R fail() {
-        return R.builder().code(CommonEnum.FAIL.getCode()).msg(CommonEnum.FAIL.getMsg()).build();
+    public static <T> R<T> fail() {
+        return R.<T>builder().code(CommonEnum.FAIL.getCode()).msg(CommonEnum.FAIL.getMsg()).build();
     }
 
-    public static <T> R fail(Integer code, String msg) {
-        return R.builder().code(code).msg(msg).build();
+    public static <T> R<T> fail(Integer code, String msg) {
+        return R.<T>builder().code(code).msg(msg).build();
     }
 }
