@@ -24,6 +24,7 @@ public class GlobalCustomAdvice {
 
     @ExceptionHandler(Exception.class)
     public R<?> handler(Exception e) {
+        e.printStackTrace();
         return R.fail(CommonEnum.FAIL.getCode(), CommonEnum.FAIL.getMsg());
     }
 
