@@ -12,8 +12,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CommonEnum {
 
-    SUCCESS(0, "SUCCESS"),
-    FAIL(-1, "FAIL"),
+    SUCCESS(200, "SUCCESS"),
+    FAIL(500, "FAIL"),
     ;
 
     private Integer code;

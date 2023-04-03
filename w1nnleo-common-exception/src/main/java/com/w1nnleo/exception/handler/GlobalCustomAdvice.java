@@ -1,5 +1,8 @@
 package com.w1nnleo.exception.handler;
 
+import org.springframework.validation.BindException;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.w1nnleo.base.entity.R;
@@ -26,6 +29,20 @@ public class GlobalCustomAdvice {
     public R<?> handler(Exception e) {
         e.printStackTrace();
         return R.fail(CommonEnum.FAIL.getCode(), CommonEnum.FAIL.getMsg());
+    }
+
+    @ExceptionHandler(BindException.class)
+    public R<?> bindExceptionHandler(BindException e) {
+        e.printStackTrace();
+        FieldError error = e.getFieldError();
+        return R.fail(CommonEnum.FAIL.getCode(), error.getDefaultMessage());
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public R<?> exceptionHandler(MethodArgumentNotValidException e) {
+        e.printStackTrace();
+        FieldError error = e.getBindingResult().getFieldError();
+        return R.fail(CommonEnum.FAIL.getCode(), error.getDefaultMessage());
     }
 
 }
