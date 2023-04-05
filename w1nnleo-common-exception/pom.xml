@@ -28,6 +28,11 @@
             <artifactId>w1nnleo-common-base</artifactId>
             <version>${w1nnleo.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
